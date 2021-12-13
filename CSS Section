@@ -1,0 +1,22 @@
+Q6. In your own words, explain css specificity.
+A. Specificity defines which selector is more powerful than the other, that is it takes precedence over the other selectors
+In ascending order: element selector -> class selector -> id selector -> inline styling
+
+Q7. In your own words, explain, what is ‘!important’ in css.  Also how does it work?  Are there any special circumstances when using it, where it’s behaviour might not be what you expect?
+It's a declaration that allows a stylesheet author to give a CSS value more weight than it naturally has.
+It must be must be placed at the end of the line, immediately before the semicolon, otherwise it will have no effect.
+
+Q8. What is your prefered layout system: inline-block, floating + clearing, flex, grid, other?  And why?
+A. Flexbox because it  comes with a range of properties allowing you to arrange items easily.These includes flex-direction, flex-wrap, justify-content, flex-shrink, flex-basis, flex-grow, ec cetera
+
+
+Q9. Are negative margins legal and what do they do (margin: -20px)?
+Yes, they are. They draw the element closer to its top or left neighbour, or draw its right and bottom neighbour closer to it.
+
+Q10. If a <div/> has no margin or other styling and a <p/> tag inside of it has a margin top of some kind, the margin from the <p/> tag will show up on the div instead (the margin will show above the div not inside of it), why is this?  What are the different things that can be done to prevent it?
+A. This is due to collapsing margins of CSS Box model. This is where margins of two or more boxes combine to form a single margin. 
+Margins that combine in this way are said to collapse, and the resulting combined margin is called a collapsed margin.
+To avoid this: 
+	a. change the display of p to inline-block
+	b. adding padding to the <div> 
+	c. adding overflow to the <div>
