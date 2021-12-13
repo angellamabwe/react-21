@@ -1,0 +1,10 @@
+Unit tests:
+
+Q11. What technologies do you use to unit test your react components?
+A. JEST library & React Testing Library
+
+Q12. Are there any pitfalls associated with this technology that have caused you difficulty in the past?
+A. No difficulties faced.
+
+Q13. How do you test in your unit tests to see if the correct properties are being passed to child components.
+A. If the correct properties are passed, then child components should be rendered on the screen
