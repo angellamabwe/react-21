@@ -1,0 +1,41 @@
+import React, { useEffect, useLayoutEffect, useState } from 'react';
+import classes from './Task.module.css';
+
+const useWidth = () => {
+    const [size, setSize] = useState(0);
+    useLayoutEffect(() => {
+        function updateSize() {
+            setSize(window.innerWidth);
+        }
+        window.addEventListener('resize', updateSize);
+        updateSize();
+        return () => window.removeEventListener('resize', updateSize);
+    }, []);
+    return size;
+}
+let divHeight;
+window.setDivHeight = (height) => divHeight = height;
+
+const Task = () => {
+    const width = useWidth();
+    const [divHeight, setDivHeight] = useState(0);
+
+    useEffect(() => {
+        window.setDivHeight();
+    }, [divHeight]);
+
+    const changeDivHeightHandler = (event) => {
+        setDivHeight(event.target.value);
+    };
+
+    return (
+        <div className={classes.task} style={{ height: divHeight }}>
+            <span>Browser width: {width}</span>
+            <br />
+            <label>Div Height (in pixels)</label>
+            <input type="number" min="10" onChange={changeDivHeightHandler} />
+        </div >
+    )
+};
+
+export default Task;
