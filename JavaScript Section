@@ -1,0 +1,37 @@
+Q1 What is your favourite new javascript feature and why?
+A. The new Array methods like map, filter, forEach, flat & flatMap. This is so because they allow me to manipulate arrays in an easy way, resulting in a new array, thereby keeping the original array as is.
+
+Q2 Explain an interesting way in which you have used this javascript feature.
+A. Once working on a project to money laundering, I filtered transaction which were above $10000 USD, so that the responsible personnel can investigate on them
+map: On a React project, I used map to turn each item propagated to child component into a JSX code
+forEach: used it to log each element to the console
+flat: used it to unbundle nested array, though it only goes 1 level deep
+flatMap: combination of flat & map
+
+Q3 Is there any difference between regular function syntax and the shorter arrow function syntax? (Write the answer in your own words)
+A. Regular function syntax:
+function nameLength(para1, para2) {
+	...
+	console.log(para1, para2);
+	return ...;
+}
+
+Arrow function syntax:
+const nameLen = (v1, v2) => {
+ ...
+ return ...;
+}
+
+-instead of the function keyword, arrow functions use =>
+-if we have one argument, then () becomes optional; but for a regular function you will have to  always put ()
+- if you have one line of code & your are using arrow function, you have the liberty to omit the return statement and the curly braces
+-when not using strict mode, regular functions can have duplicate named parameters; however, this can not be true for arrow functions, whether in strict mode or not
+
+Q4 What is the difference between ‘myFunctionCall(++foo)’   and  ‘myFunctionCall(foo++)’
+A. myFunctionCall(++foo) increments the parameter before passing it to the function, pre-increments the argument
+ myFunctionCall(foo++) post-increment the argument
+
+Q5 In your own words, explain what a javascript ‘class’ is and how it differs from a function.
+A. A class is a template for a particular object, an entity that contains related states & methods. You can create new instances of that object using new keyword
+-A function on the other hand allow us to implement the DRY (Don't Repeat Yourself) principle by packaging some lines of code which we can re-use at various points
+Unlike classes, functions are first-class objects & they can be assigned to properties of an object.
